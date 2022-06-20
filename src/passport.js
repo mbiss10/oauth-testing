@@ -29,8 +29,8 @@ passport.use(
 passport.use(
   new SpotifyStrategy(
     {
-      clientID: "111c2e3a5a494a168a118b33fb7cebb0",
-      clientSecret: "d252a6bdd6594ea1abc8d86e228db663",
+      clientID: process.env.SPOTIFY_CLIENT_ID,
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
       callbackURL: process.env.SPOTIFY_CALLBACK_URL,
       scope: ["user-read-email", "user-read-private"],
     },
